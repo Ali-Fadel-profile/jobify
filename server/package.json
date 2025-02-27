@@ -1,0 +1,35 @@
+{
+  "name": "jobify",
+  "version": "1.0.0",
+  "description": "an awasome app for tracking your job search",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "setup-production": "npm run install-client && npm run build-client && npm install",
+    "install-client": "cd ../client && npm install",
+    "build-client": "cd ../client && npm run build",
+    "server": "nodemon server.js --ignore 'client/*'",
+    "client": "cd ../client && npm run dev",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "author": "ali fadel",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.10.1",
+    "xss-clean": "^0.1.4"
+  }
+}
