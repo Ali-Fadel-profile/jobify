@@ -28,10 +28,10 @@ app.use(express.json());
 app.use(cookieParser());
 // Custom Headers
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "http://localhost:5173"); // ✅ Specific origin
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PATCH, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.header("Access-Control-Allow-Credentials", "true"); // ✅ Allow credentials (cookies)
+    res.header("Access-Control-Allow-Credentials", "true");
     if (req.method === "OPTIONS") {
         return res.sendStatus(200);
     }
@@ -43,11 +43,11 @@ app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', isAuth, jobsRouter);
 
 // Static Files 
-app.use(express.static(resolve(__dirname, "../client/dist")));
+app.use(express.static(resolve(__dirname, "./client/dist")));
 
 // Catch-All Route for SPA
 app.get("*", (req, res) => {
-    res.sendFile(resolve(__dirname, "../client/dist", "index.html"));
+    res.sendFile(resolve(__dirname, "./client/dist", "index.html"));
 });
 
 // Error Handling Middleware
