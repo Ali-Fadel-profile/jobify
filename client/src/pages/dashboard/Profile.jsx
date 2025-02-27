@@ -4,7 +4,8 @@ import { useAppContext } from "@context/appContext";
 import { useEffect, useState } from "react";
 
 function Profile() {
-  const { user, updateUser, isLoading, showAlert } = useAppContext();
+  const { user, updateUser, isLoading, showAlert, displayAlert } =
+    useAppContext();
 
   const [userData, setUserData] = useState({});
 
@@ -21,9 +22,9 @@ function Profile() {
   const submitHandler = (event) => {
     event.preventDefault();
     const { name, email, lastName, location } = userData;
-    // if (!name || !email || !lastName || !location) {
-    //   return displayAlert();
-    // }
+    if (!name || !email || !lastName || !location) {
+      return displayAlert();
+    }
     updateUser({ name, email, lastName, location });
   };
 
