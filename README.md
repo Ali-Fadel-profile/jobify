@@ -49,5 +49,5 @@ This project demonstrates my ability to build **production-ready full-stack appl
 ## 👨‍💻 Author
 
 **Ali Fadel**  
-- Portfolio: [ali-fadel-vercel.app](https://ali-fadel-vercel.app)  
+- Portfolio: [ali-fadel-vercel.app](https://ali-fadel.vercel.app)  
 - GitHub: [Ali-Fadel-profile](https://github.com/Ali-Fadel-profile)  
