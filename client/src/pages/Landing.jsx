@@ -15,10 +15,10 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-            bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-            quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-            narwhal.
+        Stay organized and in control of your career search with our job tracking app. 
+        Easily manage applications, monitor progress, and keep all job-related details 
+        in one place. Designed to save time and reduce stress, it helps you focus on 
+        landing your next opportunity.
           </p>
           <Link to="/register" className="btn register-link">
             Register
@@ -34,3 +34,4 @@ const Landing = () => {
 };
 
 export default Landing;
+
